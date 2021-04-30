@@ -6,7 +6,7 @@ const config = {
     heigth: 640,
     type: Phaser.auto,
     parent: 'game-canvas',
-    scenes: [MainScene]
+    scene: [MainScene]
 }
 
 new Phaser.Game(config);
