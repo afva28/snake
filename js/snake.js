@@ -36,25 +36,25 @@ export default class Snake {
     keydown(event){
         switch(event.keyCode){
             case 37:
-                if(this.direction != Phaser.Math.Vector2.RIGHT)
+                if(this.direction !== Phaser.Math.Vector2.RIGHT)
                 {
                     this.direction = Phaser.Math.Vector2.LEFT;
                 }
                 break;
             case 38:
-                if(this.direction != Phaser.Math.Vector2.DOWN)
+                if(this.direction !== Phaser.Math.Vector2.DOWN)
                     {
                         this.direction = Phaser.Math.Vector2.UP;
                     }
                     break;
             case 39:
-                if(this.direction != Phaser.Math.Vector2.LEFT)
+                if(this.direction !== Phaser.Math.Vector2.LEFT)
                     {
                         this.direction = Phaser.Math.Vector2.RIGHT;
                     }
                     break;
              case 40:
-                if(this.direction != Phaser.Math.Vector2.UP)
+                if(this.direction !== Phaser.Math.Vector2.UP)
                     {
                         this.direction = Phaser.Math.Vector2.DOWN;
                     }
@@ -84,10 +84,10 @@ export default class Snake {
     }
 
     checkApple(x,y){
-        if(this.apple.x=== x&& this.apple.y === y){
+        if(this.apple.x === x&& this.apple.y === y){
             this.placeApple();
             this.body.push(
-                this.scene.add.rectangle(0,0,this.tileSize,tileSize,0xffffff).setOrigin(0)
+                this.scene.add.rectangle(0,0,this.tileSize,this.tileSize,0xffffff).setOrigin(0)
             );
         }  
     }
